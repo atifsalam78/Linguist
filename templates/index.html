@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Translator</title>
+    <!-- <link href = "{{url_for('static', filename='styles/style.css') }}" rel = "stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <div class="d-grip gap-2 col-md-6 mx-auto mb-3, text-center">
+    <h1 class="display-1">My Translator</h1>
+
+    <hr>
+
+    <p class="lead, text-start">
+      MyTranslator has been meticulously crafted to offer top-notch translation services, bridging the gap between individuals from diverse language backgrounds and facilitating seamless communication through both spoken and written language.
+    </p>    
+    
+
+    <form action="/getData">
+    </div>        
+
+      <div class="row g-2">
+        <div class="d-grip gap-2 col-md-6 mx-auto mb-3">
+        <label for="target_language">Operation:</label>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="target_language" name="target_language">
+            <option selected>Select Operation</option>
+            <option value="S2ST (Speech to Speech Translation)">S2ST (Speech to Speech Translation)</option>
+            <option value="S2TT (Speech to Text Translation)">S2TT (Speech to Text Translation)</option>
+            <option value="T2ST (Text to Speech Translation)">T2ST (Text to Speech Translation)</option>
+            <option value="T2TT (Text to Text Translation)">T2TT (Text to Text Translation)</option>
+            <option value="ASR (Automatic Speech Recognition)">ASR (Automatic Speech Recognition)</option>
+        </select>
+        
+        <div class="mb-3">
+
+        </div>
+
+        <label for="target_language">Target Language:</label>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="target_language" name="target_language">
+            <option selected>Select Language</option>
+            <option value="English">English</option>
+            <option value="Urdu">Urdu</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Spanish">Spanish</option>
+        </select>
+        </div>
+      </div>
+      
+
+        <div class="mb-3 col-6 mx-auto">
+          <label for="inputSourceText" class="form-label-sm">Source Text</label>
+          <input type="text" name ="source_text" class="form-control" id="inputSourceText" aria-describedby="textHelp" placeholder="Enter your source text here">
+          <!-- <button type="submit">Submit</button> -->
+          <div id="textHelp" class="form-text"></div>
+        </div>
+
+        
+        <div class="mb-3 col-6 mx-auto">
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">{{ translated_text }}</label>
+          </div>
+
+        
+        </div>
+
+        
+          <div class="btn-group d-grid gap-2 col-sm-1 mx-auto mb-3" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="btnradio1">File</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2">Microphone</label>          
+            
+          </div>
+
+
+        <div class="mb-3 d-grid gap-2 col-6 mx-auto">          
+          <button type="submit" class="btn btn-primary">Translate</button>
+          
+        </div>
+
+        <hr>
+
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <h3>NED University of Engineering and Technology</h3>
+            <h4><em>Project given by respected Sir Qasim</em></h4>
+            <p>PGD-Data Science with Artificial Intelligence (AI)-Batch IV</p>            
+
+
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            Submitted By: <cite title="Source Title">Atif Salam</cite>
+          </figcaption>
+        </figure>    
+    
+    
+    
+    </form>
+</body>
+</html>

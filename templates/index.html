@@ -6,18 +6,19 @@
     <title>My Translator</title>
     <!-- <link href = "{{url_for('static', filename='styles/style.css') }}" rel = "stylesheet" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <div class="p-3 mb-2 bg-primary text-white">My Translator</div>
 </head>
-<body>
+<body> 
 
   <div class="d-grip gap-2 col-md-6 mx-auto mb-3, text-center">
-    <h1 class="display-1">My Translator</h1>
+    <h1><span class="badge rounded-pill badge bg-primary">My Translator</span></h1>
+    <!-- <h1>My Translator<span class="badge bg-secondary">My Translator</span></h1> -->
 
     <hr>
 
-    <p class="lead, text-start">
+    <!-- <p class="lead, text-start">
       MyTranslator has been meticulously crafted to offer top-notch translation services, bridging the gap between individuals from diverse language backgrounds and facilitating seamless communication through both spoken and written language.
-    </p>    
+    </p>     -->
     
 
     <form action="/getData">
@@ -25,14 +26,14 @@
 
       <div class="row g-2">
         <div class="d-grip gap-2 col-md-6 mx-auto mb-3">
-        <label for="target_language">Operation:</label>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="target_language" name="target_language">
+        <label for="operation">Operation:</label>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="operation" name="operation">
             <option selected>Select Operation</option>
-            <option value="S2ST (Speech to Speech Translation)">S2ST (Speech to Speech Translation)</option>
-            <option value="S2TT (Speech to Text Translation)">S2TT (Speech to Text Translation)</option>
-            <option value="T2ST (Text to Speech Translation)">T2ST (Text to Speech Translation)</option>
-            <option value="T2TT (Text to Text Translation)">T2TT (Text to Text Translation)</option>
-            <option value="ASR (Automatic Speech Recognition)">ASR (Automatic Speech Recognition)</option>
+            <option value="S2ST">S2ST (Speech to Speech Translation)</option>
+            <option value="S2TT">S2TT (Speech to Text Translation)</option>
+            <option value="T2ST">T2ST (Text to Speech Translation)</option>
+            <option value="T2TT">T2TT (Text to Text Translation)</option>
+            <option value="ASR">ASR (Automatic Speech Recognition)</option>
         </select>
         
         <div class="mb-3">
@@ -42,11 +43,11 @@
         <label for="target_language">Target Language:</label>
         <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="target_language" name="target_language">
             <option selected>Select Language</option>
-            <option value="English">English</option>
-            <option value="Urdu">Urdu</option>
-            <option value="French">French</option>
-            <option value="German">German</option>
-            <option value="Spanish">Spanish</option>
+            <option value="en">English</option>
+            <option value="ur">Urdu</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
         </select>
         </div>
       </div>
@@ -60,7 +61,7 @@
         </div>
 
         
-        <div class="mb-3 col-6 mx-auto">
+        <div class="mb-3 col-6 mx-auto overflow-auto">
           <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
             <label for="floatingTextarea">{{ translated_text }}</label>
@@ -69,8 +70,9 @@
         
         </div>
 
-        
+          
           <div class="btn-group d-grid gap-2 col-sm-1 mx-auto mb-3" role="group" aria-label="Basic radio toggle button group">
+            
             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
             <label class="btn btn-outline-primary" for="btnradio1">File</label>
           

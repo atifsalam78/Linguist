@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Page Header-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linguist</title>
+    <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.png" /> -->
+    <!-- <link href = "{{url_for('static', filename='styles/style.css') }}" rel = "stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+   
+    
+  <!-- Jumbotron -->
+  <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    
+    
+    <!-- Navbar content -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+      
+      <div class="container-fluid">
+        <a class="navbar-brand text-warning" href="/index">Linguist</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-warning" href="/error_page">About</a>
+              
+            </li>
+            
+            
+          <!-- <form class="d-flex" role="search">            
+            <input class="form-control me-2" type="text" name ="search_text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-warning" type="submit">Search</button>          
+          </form> -->
+        </div>
+        
+      </div>
+    </nav>
+    
+
+  </nav>
+  
+  <body>  
+    
+  <!-- Background image -->
+<div
+class="bg-image"
+style="
+  background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.webp');
+  height: 100vh;
+"
+>
+
+<div class="container-sm text-body">
+
+  <!-- <div class="bg-dark p-5"> -->
+
+    <div class="col-md-6 mx-auto mb-5, text-center">
+      <!-- <h1><span class="badge rounded-pill badge bg-warning">Linguist</span></h1> -->
+      <h1 class="mb-2 text-warning">Error!</h1>
+      
+                
+<div class="mb-3 text-center, text-dark">
+  
+  
+    
+    <h3 for="inputSourceText" name = "error_input" class="form-label-sm">{{ error_input }}</h3>
+  </div>
+</div>
+
+</div>
+</div>
+
+</head>
+
+  
+  
+    
+
+    
+    
+</div>        
+    
+
+  
+</body>
+
+</html>

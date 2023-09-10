@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linguist</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.png" /> -->
     <!-- <link href = "{{url_for('static', filename='styles/style.css') }}" rel = "stylesheet" /> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- <div class="p-3 mb-2 bg-primary text-white">Linguist</div> -->
@@ -142,7 +142,6 @@
             <option value="zh-CN">Chinese</option>
             <option value="zh-TW">Chinese (Mandarin/Taiwan)</option>
             <option value="zh">Chinese (Mandarin)</option>            
-            
         </select>
         </div>
       </div>
@@ -153,26 +152,38 @@
           <input type="text" name ="source_text" class="form-control text-black" id="inputSourceText" aria-describedby="textHelp" placeholder="Enter your source text here">
          
           <div id="textHelp" class="form-text"></div>
-        </div>
+
+          
+        </div>        
 
         
         <div class="mb-3 col-6 mx-auto overflow-auto">
           <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">{{ translated_text }}</label>
-          </div>
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"> </textarea>
+            <label for="floatingTextarea">{{ translated_text }}</label>            
+          </div>         
 
         
         </div>
 
+        <script>
+            document.getElementById("mes").addEventListener("click", myFunction);
+            
+            function myFunction() {
+              document.getElementById("mes").innerHTML = "Translating!";
+            }
+            </script>
 
-        <div class="mb-3 gap-2 col-6 mx-auto">          
-          <button type="submit" class="btn btn-warning">Translate</button>
+        <div class="mb-3 gap-2 col-6 mx-auto">                   
+          <button type="submit" class="btn btn-warning" onclick="myFunction()">Translate</button>                  
           
+          <div class="d-flex align-items-center text-warning" id="mes">
+          <!-- <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>                   -->
           
         </div>
-       
-
+      
+        </div>
+        
         <figure class="text-center text-warning">
           <blockquote class="blockquote">
             <h3>NED University of Engineering and Technology</h3>
@@ -191,7 +202,9 @@
 </div>
 </div>
 </div>  
-  
+
+          
+
 </body>
 
 </html>
